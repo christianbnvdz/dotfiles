@@ -1,0 +1,173 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[bar/earthbound]
+width = 100%
+height = 30
+radius = 0
+background = #303
+foreground = #FFC
+border-color = #F99
+border-size = 4
+tray-position = none
+font-0 = Hack:style=Regular;3
+font-1 = "Symbols Nerd Font:style=1000-em:size=14;3"
+font-2 = "Symbols Nerd Font:style=1000-em:size=7;2"
+fixed-center = true
+modules-left = i3
+modules-center = date
+modules-right = cpu memory pulseaudio wireless-network battery
+padding-right = 1
+module-margin-left = 2
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.i3}
+
+; focused = Active workspace on focused monitor
+label-focused = %{T3}ﰉ%{T-}%icon%
+label-focused-foreground = #FFC
+label-focused-background = #303
+label-focused-underline= #303
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %{T3}%{F#0000}ﰉ%{F- T-}%icon%
+label-unfocused-foreground = #FFC
+label-unfocused-padding = 1
+
+ws-icon-0        =  1;
+ws-icon-1        =  2;
+ws-icon-2        =  3;
+ws-icon-3        =  4;烈
+ws-icon-4        =  5;
+ws-icon-5        =  6;ﬦ
+ws-icon-6        =  7;K
+ws-icon-7        =  8;
+ws-icon-8        =  9;שׁ
+ws-icon-9        = 10;0
+ws-icon-default  = 
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format = <label>
+format-prefix = "CPU: "
+format-prefix-foreground = #FFC
+label = %percentage:3%%
+
+[module/memory]
+type = internal/memory
+format = <label>
+interval = 2
+format-prefix = "RAM: "
+format-prefix-foreground = #FFC
+label = %percentage_used:3%%
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = ""
+date-alt = "%b %d %Y | "
+
+time = %I:%M %p
+time-alt = %a %I:%M:%S %p
+
+format-prefix = " "
+format-prefix-foreground = ${colors.time}
+;format-underline = ${colors.time}
+
+label = %date%%time%
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 99
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage:2%%
+ramp-capacity-0  = %{F#FF3AD6}%{F-}
+ramp-capacity-1  = %{F#FF3AD6}%{F-}
+ramp-capacity-2  = 
+ramp-capacity-3  = 
+ramp-capacity-4  = 
+ramp-capacity-5  = 
+ramp-capacity-6  = 
+ramp-capacity-7  = 
+ramp-capacity-8  = 
+ramp-capacity-9  = 
+
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage:2%%
+animation-charging-0 = %{F#FF3AD6}%{F-}
+animation-charging-1 = %{F#FF3AD6}%{F-}
+animation-charging-2 = %{F#FF3AD6}%{F-}
+animation-charging-3 = %{F#FF3AD6}%{F-}
+animation-charging-framerate = 750
+
+format-full = <label-full>
+label-full = %{F#00FF00}%{F-} %percentage%%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-prefix = "%{T3}ﰉ%{T-}  "
+format-volume = %{F#FFC}<ramp-volume>%{F-} <label-volume>
+label-volume = %percentage:2%%
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 墳
+ramp-volume-3 = 
+
+format-muted-prefix = "%{T3}ﰉ%{T-}  "
+format-muted = <label-muted>
+label-muted = ﱝ %percentage:2%%
+label-muted-foreground = #FF3AD6
+
+click-right = pavucontrol
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+interval = 5
+
+format-connected = <label-connected>
+label-connected = %{F#FFC}%{F-} %signal%
+
+format-disconnected = <label-disconnected>
+label-disconnected =  %signal%
+label-disconnected-foreground = #FF3AD6
+
+format-packetloss = <label-packetloss>
+label-packetloss =  %signal%
+label-packetloss-foreground = #FF3AD6
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 50
+margin-bottom = 50

@@ -1,0 +1,58 @@
+* {
+  background-color: #0000;
+  text-color: #FFC;
+}
+
+window {
+  transparency: "real";
+  background-color: #0000;
+}
+
+textbox-prompt {
+  content: "ﰉ";
+  font: "Symbols Nerd Font 14";
+  expand: false;
+  vertical-align: 0.5;
+  horizontal-align: 0;
+  padding: 0 0 0 1%;
+}
+
+inputbar {
+  border-radius: 15;
+  border: 4;
+  border-color: #F99;
+  background-color: #303;
+  children: [textbox-prompt, entry];
+}
+
+box, case-indicator, num-rows, num-filtered-rows {
+  enabled: false;
+}
+
+entry {
+  font: "Hack Regular 18";
+  padding: 20;
+}
+
+listview {
+  spacing: 0;
+  cycle: false;
+  lines: 7;
+  columns: 2;
+  border: 4;
+  border-color: #F99;
+  border-radius: 15;
+  margin: 10px 0 0 0;
+  padding: 0 0 15 0;
+  background-color: #303;
+}
+
+element-icon {
+  padding: 0 0 0 0;
+  size: 30px;
+}
+
+element-text {
+  margin: 15px 0px 0px 60px;
+  font: "Hack Regular 14";
+}

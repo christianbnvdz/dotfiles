@@ -1,0 +1,16 @@
+configuration {
+	modi: "window,run,ssh,drun,filebrowser";
+	show-icons: false;
+	terminal: "kitty";
+	scroll-method: 1;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@theme "~/.config/rofi/themes/main.rasi"
