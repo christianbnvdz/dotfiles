@@ -1,6 +1,6 @@
 * {
   background-color: #0000;
-  text-color: #FFC;
+  text-color: #FFF;
 }
 
 window {
@@ -9,7 +9,7 @@ window {
 }
 
 textbox-prompt {
-  content: "ﰉ";
+  content: ">";
   font: "Symbols Nerd Font 14";
   expand: false;
   vertical-align: 0.5;
@@ -18,10 +18,10 @@ textbox-prompt {
 }
 
 inputbar {
-  border-radius: 15;
-  border: 4;
-  border-color: #F99;
-  background-color: #303;
+  border-radius: 0;
+  border: 2;
+  border-color: #FFF;
+  background-color: #000;
   children: [textbox-prompt, entry];
 }
 
@@ -39,12 +39,12 @@ listview {
   cycle: false;
   lines: 7;
   columns: 2;
-  border: 4;
-  border-color: #F99;
-  border-radius: 15;
+  border: 2;
+  border-color: #FFF;
+  border-radius: 0;
   margin: 10px 0 0 0;
   padding: 0 0 15 0;
-  background-color: #303;
+  background-color: #000;
 }
 
 element-icon {

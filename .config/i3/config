@@ -187,13 +187,14 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Ctrl+4 exec escrotum -s && mv *_escrotum.png ~/Pictures/Screenshots
 
 default_border pixel 0
-#for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 0
+for_window [title="kitty.*"] border pixel 2
 gaps inner 0
 
-client.focused          #000 #000 #FFF #1793D1 #1793D1
-client.focused_inactive #000 #000 #FFF #1793D1 #1793D1
-client.unfocused        #000 #000 #FFF #1793D1 #1793D1
+client.focused          #000 #000 #FFF #FFF #FFF
+client.focused_inactive #000 #000 #FFF #FFF #FFF
+client.unfocused        #000 #000 #FFF #FFF #FFF
 
 exec nitrogen --restore &
 exec picom -b
-exec polybar earthbound &
+exec polybar standard &

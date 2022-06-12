@@ -14,12 +14,12 @@ export PATH=$PATH:$GOPATH/bin
 
 get_branch_name () {
   if git status &> /dev/null; then
-    echo "\\[\\e[48;5;17;38;5;18m\\] \\[\\] $(git status | grep "On branch" | cut -c11-) \\[\\e[0m\\]"
+    echo "\\[\\e[48;5;17;38;5;0m\\] \\[\\] $(git status | grep "On branch" | cut -c11-) \\[\\e[0m\\]"
   fi
 }
 
 prompt_cmd () {
-  dir='\[\e[48;5;16;38;5;18m\] \w \[\e[0m\]'
+  dir='\[\e[48;5;16;38;5;0m\] \w \[\e[0m\]'
   PS1=${dir}
   PS1+=$(get_branch_name)
   PS1+=' '
