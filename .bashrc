@@ -7,6 +7,10 @@
 
 alias gitlog='git log --all --oneline --graph'
 alias ls='ls --color=auto'
+alias open='xdg-open'
+
+export GOPATH=/home/christian/.go
+export PATH=$PATH:$GOPATH/bin
 
 get_branch_name () {
   if git status &> /dev/null; then
