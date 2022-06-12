@@ -48,7 +48,7 @@ label-mode-background = #000
 label-focused = %{T3}ﰉ%{T-}%icon%
 label-focused-foreground = #000
 label-focused-background = #FFF
-label-focused-underline= #000
+; label-focused-underline= #000
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -75,7 +75,7 @@ format = <label>
 format-prefix = "CPU: "
 format-background = #000
 format-foreground = #FFF
-format-underline = #FFF
+; format-underline = #FFF
 label = %percentage:3%%
 
 [module/memory]
@@ -84,7 +84,7 @@ format = <label>
 interval = 10
 format-prefix = "RAM: "
 format-prefix-foreground = #FFF
-format-underline = #FFF
+; format-underline = #FFF
 label = %percentage_used:3%%
 
 [module/date]
@@ -100,7 +100,7 @@ time-alt = %a %I:%M:%S %p
 format-prefix = " "
 format-foreground = #FFF
 format-background = #000
-format-underline = #FFF
+; format-underline = #FFF
 
 label = %date%%time%
 
