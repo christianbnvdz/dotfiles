@@ -6,6 +6,9 @@
 window {
   transparency: "real";
   background-color: #0000;
+  location: north west;
+  margin: 30 0 0 0;
+  width: 400;
 }
 
 textbox-prompt {
@@ -23,6 +26,7 @@ inputbar {
   border-color: #FFF;
   background-color: #000;
   children: [textbox-prompt, entry];
+  margin: 5px 0 0 0;
 }
 
 box, case-indicator, num-rows, num-filtered-rows {
@@ -30,15 +34,25 @@ box, case-indicator, num-rows, num-filtered-rows {
 }
 
 entry {
-  font: "Hack Regular 18";
-  padding: 20;
+  font: "Hack Regular 14";
+  padding: 5;
+}
+
+textbox {
+  enabled: false;
+  padding: 0;
+  margin: -10;
+  height: 0;
+  width: 0;
+  border: 0;
+  font: "Hack Regular 0";
 }
 
 listview {
   spacing: 0;
   cycle: false;
-  lines: 7;
-  columns: 2;
+  lines: 19;
+  columns: 1;
   border: 2;
   border-color: #FFF;
   border-radius: 0;
@@ -48,11 +62,11 @@ listview {
 }
 
 element-icon {
-  padding: 0 0 0 0;
+  padding: 11 0 10 13;
   size: 30px;
 }
 
 element-text {
-  margin: 15px 0px 0px 60px;
+  margin: 15px 0px 0px 10px;
   font: "Hack Regular 14";
 }

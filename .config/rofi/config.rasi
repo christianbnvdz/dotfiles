@@ -1,6 +1,6 @@
 configuration {
 	modi: "window,run,ssh,drun,filebrowser";
-	show-icons: false;
+	show-icons: true;
 	terminal: "kitty";
 	scroll-method: 1;
   timeout {
